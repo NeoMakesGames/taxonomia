@@ -1,11 +1,7 @@
-import os
 import torch
 from transformers import AutoTokenizer, AutoModel, AutoConfig
 
 MODEL_ID = "zhihan1996/DNABERT-2-117M"
-
-# Keep Hugging Face downloads quiet so CI logs stay readable.
-os.environ.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "1")
 
 
 def disable_flash_attention(config):
